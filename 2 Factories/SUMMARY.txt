@@ -1,0 +1,30 @@
+Why?:
+	When object creation becomes too convoluted via a constructor that takes too many (optional?) parameters or too many different overloaded constructors.
+	Constructors are limiting in that they are unable to provide a good name for what they do specifically given some set of params (They must have type name as their name)
+	Optionl param hell, too many different versions of constructors etc.
+
+	NOTE: Factory pattern is NOT PIECEWISE (unlike Builder pattern which is). Idea is to make the object in one go. Not in multiple builder like calls.
+
+	FACTORY (Def:) A seperate component (either a method or a class) that is responsible for the full creation of some object, in one go. (Not piecewise)
+	ABSTRACT FACTORY (Def:) Factory construct that creates objects that belong to a hierarchy.
+	FACTORY METHOD (Def:) Function that creates objects. Basically a constructor only can be more descriptive.
+
+Factory Method:
+	Delegate creation of the object from the constructor out to some other method.
+	Static function that is called from the Class::create() scope.
+
+Factory:
+	Put the static factory method in its own class.
+	Used when the factory methods become large or more complex.
+
+Inner Factory:
+	The factory class can be put in the class it is responsible for creating as a private member class.
+	Exposed as a public static member, this inner factory class can be called via Class::FactoryClass.create()
+
+	Nice way to show that the factory class is tightly bound to the class it is responsible for creating.
+
+Abstract Factory:
+	Used when the objects to create belong to some inheritance hierarchy.
+	Factory classes are created in a similar hierarchy.
+		Making use of abstract interface Factories so that new specific factories can be created easily by extension.
+		Base class of the objects to create are used also so that the abstract factory can be specificaly implmented for any concrete subtype.

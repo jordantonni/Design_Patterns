@@ -1,0 +1,26 @@
+Def:
+	State Pattern - The objects behavior is determined by the current state of the object.
+					Object can transition from one state to another.
+					A Trigger causes a state transition.
+					State Machine - Construct that manages states and transitions.
+
+Why?:
+	- Some objects we model, such as a telephone, can only do certain things depending on what state they are in.
+	- e.g. If a phone is ringing we have to transition by picking it up to the answered state, only then can we start to talk.
+
+
+Naive Implementation:
+	- Map from State -> vector of <state, trigger> pairs
+	- Models how each state can transition, using a trigger, to other states connected to it
+
+Boost.MSM
+	- Boosts built in library for state machines.
+	- All template meta programming so everything is defined as classes / structs
+
+	- Each state can also have entry and exit behaviors to invoke
+	- Actions can be invoked on triggers also
+	- Guard conditions on if a transition can execute
+	- Default action to take if no transition exists for that trigger / state combination.
+
+
+

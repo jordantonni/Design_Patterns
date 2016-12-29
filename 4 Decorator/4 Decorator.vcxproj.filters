@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Source Files\1 Function Decorator">
+      <UniqueIdentifier>{5e9970d2-349a-469c-b3ee-54f8b4c2ee42}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\2 Wrapping Decorator">
+      <UniqueIdentifier>{0c4a89ef-c6db-4366-b8c7-e891532c4486}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\3 Mixin Inheritance">
+      <UniqueIdentifier>{0717cbf1-cc9c-4eca-b0de-1ee4567fe30b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\4 Improvement to Mix-in">
+      <UniqueIdentifier>{60c131b1-1d41-4046-aaef-9a80966cbcd4}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="4 Decorator.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="VariadicTemplateRevision.cpp">
+      <Filter>Source Files\1 Function Decorator</Filter>
+    </ClCompile>
+    <ClCompile Include="2 Better Decorator.cpp">
+      <Filter>Source Files\1 Function Decorator</Filter>
+    </ClCompile>
+    <ClCompile Include="1 Naive Function Decorator.cpp">
+      <Filter>Source Files\1 Function Decorator</Filter>
+    </ClCompile>
+    <ClCompile Include="WrappingDec.cpp">
+      <Filter>Source Files\2 Wrapping Decorator</Filter>
+    </ClCompile>
+    <ClCompile Include="MixinDecorator.cpp">
+      <Filter>Source Files\3 Mixin Inheritance</Filter>
+    </ClCompile>
+    <ClCompile Include="MixIn Improvements.cpp">
+      <Filter>Source Files\4 Improvement to Mix-in</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="SUMMARY.txt" />
+  </ItemGroup>
+</Project>

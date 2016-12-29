@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Source Files\1 Pimpl Idiom">
+      <UniqueIdentifier>{aaa8e123-5239-4a5f-9f18-28a8d5a1229f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\1 Pimpl Idiom\Source">
+      <UniqueIdentifier>{83c0b7e8-fe18-481a-82e5-98beaa80ba7c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\1 Pimpl Idiom\Header">
+      <UniqueIdentifier>{c72a5674-8da4-4526-b0a0-e7f924426382}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\2 Pimpl as a Bridge">
+      <UniqueIdentifier>{00f69ee5-478b-4f0d-a387-0a29de0f511b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\2 Pimpl as a Bridge\Header">
+      <UniqueIdentifier>{e8f93f1e-1aba-436d-a9a2-d3706c8f585d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\2 Pimpl as a Bridge\Source">
+      <UniqueIdentifier>{eb339912-e0f7-4970-af5d-f9a989fe74b2}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="2 Bridge.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Human.cpp">
+      <Filter>Source Files\1 Pimpl Idiom\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="HumanBridge.cpp">
+      <Filter>Source Files\2 Pimpl as a Bridge\Source</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="SUMMARY.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Human.h">
+      <Filter>Source Files\1 Pimpl Idiom\Header</Filter>
+    </ClInclude>
+    <ClInclude Include="HumanBridge.h">
+      <Filter>Source Files\2 Pimpl as a Bridge\Header</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

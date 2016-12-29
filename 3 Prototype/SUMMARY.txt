@@ -1,0 +1,20 @@
+﻿Why?:
+	Prototype (Def:) A pre-existing object that is either partially or fully initialized. Copy it to make use out of.
+	Require a deep-copy (clone) of the prototype to then customize it to fit our needs.
+
+Basic Gist:
+	Create new objects of some class by passing in an already made object that has some memeber data already set.
+	The copy constructor then copies this across. Leaving the original object (prototype object) untouched and free to be used again.
+
+Prototype Factory:
+	A class to encapsulate the prototypes so they dont clog up the global namespace or translation unit.
+	Can have multpiple different prototypes each with different data.
+
+	Different static factory methods can then be used to create new objects, by passing in specific prototypes to their copy constructors.
+
+Serialization:
+	Can use serialization of classes to do the copying (cloning) for us.
+	This can make it easier to provide deep copies of objects that themselves contain lots of member classes -> in a large object graph.
+	Boost serialization is good to use!
+
+	Can define a clone function that takes a prototype object

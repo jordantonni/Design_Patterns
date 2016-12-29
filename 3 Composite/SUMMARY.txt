@@ -1,0 +1,36 @@
+﻿Why?:
+	(Def:) - Two ways of including traits of one object in another. 
+				- Inheritance (Taken from base classes)
+				- Composition (Member variable)
+
+
+						---- COMPOSITE DESIGN PATTERN -----
+			- To be able to interact with a group of objects in the same way as a single object.
+			- Treat both types of object (singular and composite) uniformly 
+
+
+Problems:
+	We sometimes wish to treat single objects (such as a class that represents a single number (literal))
+	and a composite object (such as a class that holds two literals or single objects) in the same way.
+
+	This means we need to offer a uniform interface for dealing with both types.
+	This can be hard to implement in C++ due to not having an easy way to traverse all the objects that a class is composed of.
+
+Implementation:
+	- Both the single object class and the composite object class derive from some base interface.
+	- Both classes therefore override some functionality and expose the same method.
+	- The composite class has a vector or container of references to the base class it dervies from.
+	- We create a tree like structure due to the vector being able to contain recursive composite elemtents (sub-groups)
+	
+	This allows us to do the following:
+
+		- Call the overridden method on instances of the object.
+		- Call the overridden method on instances of the composite object
+			- This will iterate though the vector of sub objects it contains and call their overridden method.
+
+		-> Uniform interface to treat both single and composite types.
+
+c++:
+	- C++ has no base class for enumeration of objects
+	- Only iterable by begin() and end() functions.
+	- We can create them for a singluar object to act as though it is a collection.

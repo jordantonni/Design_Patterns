@@ -1,0 +1,21 @@
+Why?:
+	(Def:) Adapter : Changes one existing interface, X, into another required interface, Y.
+	Allows us to change a preexisting interface that we have to work with into an interface that we can support and use better.
+	Allows for modularity.
+	Allows for easier testing.
+	Allows for decoupling.
+
+Adapter:
+	Basically a wrapper around some other class.
+
+Example of Adapter - C++ std::Stack:
+	C++ stack is an adapter over the deque container. (Can provide another container if you wish)
+	Providing a different (restricted) interface to the deque container.
+		Restricted interface provides intent on how the class should be used.
+
+Caching:
+	The adapter typically has a reference to the adaptee class that you are adapting (it invokes the methods on it within its own wrappers after all)
+	These intermediate representations of the object you are adapting can pile up.
+		Creating an adapter that doesnt spawn temporaries for objects it has already adapted.
+		The adapter provides a good place to create some caching area (Implemented via a map perhaps)
+		That allows you to store the object you are adapating in the map and check if it has already been created before creating a new on on each access.

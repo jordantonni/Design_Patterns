@@ -1,0 +1,20 @@
+Def: TEMPLATE METHOD
+	- Base class defines a template / skeleton of an algorithim.
+	  Subclasses that derive from this then implement the concrete specifics.
+
+	  NOTE: Has nothing to do with C++ templates. Here template means skeleton
+
+Difference from Strategy Pattern:
+	- Strategy pattern uses aggregation/COMPOSITION to split the high level from the low level
+		- Aggregration of an interface member that can point to any specific concrete implementation
+	- Template method uses INHERITANCE to split the high from low level
+		- Base has high level, derived has specific
+
+		TLDR: Template = Inheritance, Strategy = Composition
+
+How:
+	- Base class is abstract and defines only the general way to carry out something, calling yet to be implemented virtual methods for the specifics.
+	- Subclassess then inherit from this skeleton class, implementing the virtual methods specifically how they need.
+
+	Basically, the specific parts are defined in the base class as pure virtual functions.
+	Inheritating from the base and providing concrete implementations for the pure virtual funtions gives the low level policy.

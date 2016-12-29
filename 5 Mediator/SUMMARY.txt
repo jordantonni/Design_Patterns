@@ -1,0 +1,21 @@
+Def: Mediator:
+	- A component that allows communciation between other components, without them having direct references or contact with each other.
+
+Why?:
+	- Components can come into the system and also leave the system at any time
+		- Players in a MMORPG
+		- Users in a chat room
+	- These components should not be able to reference each other directly,
+		- Would lead to dangling pointers when one left and be very complex to keep adding new ones when they joined
+
+IDEA:
+	Mediator is a Central Component (Like a bus) where each component can communicate to others.
+
+Implementation:
+	- Createa a central component bus/broker (i.e. a chat room)
+	- Each object then has a reference to that broker mediator
+	- The mediator has functions that the individual clients of it can call to communicate with others
+	- The clients in turn have functions the mediator calls to realise that communication to other clients
+
+
+Boost Signal and RxCpp libraries implement these patterns very well.

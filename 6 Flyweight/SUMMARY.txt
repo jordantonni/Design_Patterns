@@ -1,0 +1,22 @@
+Why?:
+	Avoid redundant storing of data.
+	e.g. If person objects have a first and lastname field. Many people will have the same first and/or last names.
+		- Can store pointers to the names in a list and share the names.
+
+	Flyweight:
+		- Space optimization by storing redundant copies of data externally and associating it with similar objects.
+
+Naive Implementation:
+	Store the data in some form of static map of that class.
+	When creating an object we call a static method that checks if the values passed in are already in the map, if they are
+	we associate the value with the key of the class, otherwise we add the new value to the map.
+
+Boost Implementation:
+	Boost has a built in boost/flyweight.hpp that provides:
+		- boost::flyweight<type T> data;
+		- Easy to use and dont have to set up the map yourself.
+
+TLDR:
+	- Store common data externally or in a flyweight library
+	- Can use the idea of ranges:
+		- Instead of specifying some trait for every element, specify it for the range of elements (i.e. bold for a rang of chars and not a flag on each char)

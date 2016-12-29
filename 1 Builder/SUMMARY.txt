@@ -1,0 +1,34 @@
+Why?:
+	Creation of object is comprised of multiple complex parts.
+	Builder pattern gives us a builder API to create each part in a piecewise fasion.
+
+	NOTE: Builder pattern is only used for PIECEWISE object creation. Each part of the object is built up seperately.
+		E.G. Creating an HTML document starts with creating a root node, then adding children etc. Each element is piecewise.
+
+Builder pattern: 
+	The builder is a seperate object that helps us build some other complex object.
+	Can create the builder either by its own public constructor, or give the object you are creating a static public method that returns a builder.
+		e.g. The Person class has a static create() method that returns a PersonBuilder.
+
+Fluent Interface:
+	Allows you to chain multiple method invocations together via each function returning a reference to the object being worked on.
+	e.g. returning this or *this
+
+Groovy Style Builders:
+	Initializer lists allow us to provide a way to create objects using nested braces
+	e.g. Object {
+		     	 AnotherObject { .... },
+			     AndAnotherObject { ... }
+		        }
+
+Facets:
+	Create a base class builder that creates the object in question.
+	Have specific builders for each "facet" of the object
+		 i.e. A builder specific to creating some subset of the objects member variables
+	Base builder provides access to the specific sub class builders by having a method that returns one of them.
+	
+	We can create the object by then calling the base builder and invoking ther sub class builders from it.
+	Doing this for each of the objects facets (member variable groups).
+
+	Works well with a fluent interface.
+	

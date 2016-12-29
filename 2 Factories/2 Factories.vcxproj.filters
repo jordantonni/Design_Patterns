@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Source Files\1 Naive">
+      <UniqueIdentifier>{8e319be3-77da-4bd2-a551-8dab4a24ab18}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\2 Factory Method">
+      <UniqueIdentifier>{55087df4-8986-4b28-a9a9-38686fc84b4a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\3 Factory">
+      <UniqueIdentifier>{bc030f1f-488b-4f6c-b2eb-55b4cfc6129f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\4 Inner Factory">
+      <UniqueIdentifier>{5b353f09-1b16-4ce1-a646-7008f0d56c84}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\5 Abstract Factory">
+      <UniqueIdentifier>{10e5ac64-aee7-4fcb-87c2-32d9aafd2c21}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\5 Abstract Factory\NaiveMethod">
+      <UniqueIdentifier>{60344fc2-5d36-4ae1-ad8d-8091a9c56c0b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\5 Abstract Factory\AbsFactory Method">
+      <UniqueIdentifier>{32a447e1-2f75-463b-a0b3-3264953033ca}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="SUMMARY.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="NaivePoint.cpp">
+      <Filter>Source Files\1 Naive</Filter>
+    </ClCompile>
+    <ClCompile Include="FactoryMethod.cpp">
+      <Filter>Source Files\2 Factory Method</Filter>
+    </ClCompile>
+    <ClCompile Include="Factory.cpp">
+      <Filter>Source Files\3 Factory</Filter>
+    </ClCompile>
+    <ClCompile Include="InnerFactory.cpp">
+      <Filter>Source Files\4 Inner Factory</Filter>
+    </ClCompile>
+    <ClCompile Include="AbstractFactory.cpp">
+      <Filter>Source Files\5 Abstract Factory\AbsFactory Method</Filter>
+    </ClCompile>
+    <ClCompile Include="NaiveAbsFactory.cpp">
+      <Filter>Source Files\5 Abstract Factory\NaiveMethod</Filter>
+    </ClCompile>
+    <ClCompile Include="Factories.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="CoffeeFactory.h">
+      <Filter>Source Files\5 Abstract Factory\AbsFactory Method</Filter>
+    </ClInclude>
+    <ClInclude Include="TeaFactory.h">
+      <Filter>Source Files\5 Abstract Factory\AbsFactory Method</Filter>
+    </ClInclude>
+    <ClInclude Include="HotDrinkFactory.h">
+      <Filter>Source Files\5 Abstract Factory\AbsFactory Method</Filter>
+    </ClInclude>
+    <ClInclude Include="HotDrink.h">
+      <Filter>Source Files\5 Abstract Factory</Filter>
+    </ClInclude>
+    <ClInclude Include="DrinkFactory.h">
+      <Filter>Source Files\5 Abstract Factory\AbsFactory Method</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

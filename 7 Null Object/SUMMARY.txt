@@ -1,0 +1,14 @@
+Why?:
+	Component (Class A) has or depends on some other class B.
+	It is usually passed in as an instance to the A constuctor or dependency injected.
+
+	To allow B to be an optional dependency, you would need checks within the class A before each use of B's functionality.
+
+Null Object:
+	- Null object is a way to createa  NOP / No-Op / No-Operation class that inherites from the B or B's base and just acts as a way to fullfill the 
+	  dependency requirement of the class being there, but it doesnt do anything.
+	- Derives from the base of the class we are making a null version of.
+
+Problems:
+	- If the object we are proving a null object of has methods that return values and the Class A uses them it can be hard.
+		- Can return a default value of them but if they are context sensitive it can be impossible to provide the null object.

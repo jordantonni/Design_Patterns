@@ -1,0 +1,29 @@
+Def?:
+	- Interpreter: Component that processes structured text data and
+		- Turns it into seperate lexical tokens. (lexing)
+		- Interprets sequences of those tokens, creating a data structure from them.(parsing)
+
+Why?:
+	- Parsing:
+		- To parse text, you need to turn it into some OOP structures, e.g. a tree, then traverse and make decisions on that.
+		- Can get very complex
+
+Interpreters do 2 fundamental stages:
+
+	Stage (1) - Lexing
+		- Turn text into a set of tokens 
+		2*(3+4) -> Literal[2] STAR LPAREN Literal[3] PLUS Literal[4] RPAREN
+
+	Stage (2) - Parsing
+		- Turn a set of tokens into meaningful constructs (objects / hierarchy of data structures)
+
+		-> MultiplicationExpression{
+			Integer[2],
+			AdditionExpression{
+				Integer[3],
+				Integer[4]
+			}
+		}
+
+Boost.Spirit - Is a library that provides lexing and parsing as a recursive descent parser
+

@@ -1,0 +1,24 @@
+Def:
+	- Memento: A class that acts as a handle representing system state at some time. 
+		- Allows you to rollback the system to the state when the handle was generated.
+		- May or may not directly expose the state information.
+
+Why?:
+	- As a system goes though changes, i.e. updates to a bankaccount etc
+		- Want to be able to navigate that history or even rollback to certain times.
+	- Command pattern allows us to undo and redo those modifications as it encapsulates / records each command / action performed 
+	- Memento pattern instead stores snapshots of the entire state of the system
+
+Implementation:
+	- A memento class has fields that store the state of whatever object you are tracking
+	- Each function that modifies the object state should also create a memento object and return it.
+
+	- Could either return a memento object from each member method, thus giving back the snap shot for each command.
+	- Or could store the mementos in a vector or data structure of the object itself, providing a per instance history to traverse etc.
+
+	IDEA:
+		- Each modification method creates a memento object with the current state of its own fields
+		- Restore methods (also undo and redo) take a memento object and use it to restore its data to that of the mementos snapshot
+
+
+

@@ -1,0 +1,34 @@
+Why?:
+	A call to some fucntion may not belong to an object in the same process or even the same machine, it may be a web service call etc.
+	Proxy acts as a layer inbetween the caller and the callee that proxies on the request and may do some additional logic.
+	Example of a communication proxy.
+
+Def: Proxy-
+	- A class that serves as an interface to some resource.
+	- Resource may be expensive to contstruct ( => it will provide delayed initialization (only when its actually called))
+	- May require logging
+	- Invocation over the web
+	- or any other additional functionality
+
+	TLDR: A proxy masquerades as the class it is proxying. 
+		  Provides the same interface.
+		  Create a proxy by replicating the interface of the class it is proxying.
+
+
+std::shared_ptr<>:
+	- Acts as a proxy for the class it holds
+	- Gives you access to the classes interface by using -> or *().
+
+
+Difference between Proxy and Decorator?:
+	- Proxy provides identical interface
+	- Decorator provides an enhanced or modified interface
+
+	- Decorator usually has a reference to the class or function it is decorating, it wraps it with other logic and then invokes the interface on that class
+	- Proxy doesn't have to aggregate the class it is proxying for. It typically stands in place of it. i.e. smart pointers or the communication HTTP rest proxy example.
+
+
+Used for:
+	Communication 
+	Logging
+	Caching etc

@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Source Files\1 Chat Room">
+      <UniqueIdentifier>{a1bb26d5-8ff3-4f45-8d57-c3891aaad6af}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\1 Chat Room\Headers">
+      <UniqueIdentifier>{a69afd82-e8f5-4dd7-8296-c515718f536f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\1 Chat Room\Source">
+      <UniqueIdentifier>{71b5e2b6-4aab-4808-83c4-50af80ad7ad5}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="5 Mediator.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Chat_Person.cpp">
+      <Filter>Source Files\1 Chat Room\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Chat_Room.cpp">
+      <Filter>Source Files\1 Chat Room\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="Chat_Mediator.cpp">
+      <Filter>Source Files\1 Chat Room\Source</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="SUMMARY.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Chat_Room.h">
+      <Filter>Source Files\1 Chat Room\Headers</Filter>
+    </ClInclude>
+    <ClInclude Include="Chat_Person.h">
+      <Filter>Source Files\1 Chat Room\Headers</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

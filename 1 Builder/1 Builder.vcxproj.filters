@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Source Files\1 Naive">
+      <UniqueIdentifier>{c7b41e98-007c-4939-bb26-a8cc368d3958}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\2 Builder">
+      <UniqueIdentifier>{d8a075e5-f7fc-43fc-af40-f5b1d3b95606}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\3 Fluent Builder">
+      <UniqueIdentifier>{4b428d82-8f70-4dfc-bbf2-f6b057a5c1f8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\4 Groovy Style Builder">
+      <UniqueIdentifier>{77270812-5fdf-4925-a007-606db64b2ea0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\5 Builder Facets">
+      <UniqueIdentifier>{232ed5df-e9fe-44ac-ba26-ae9e93360b81}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\5 Builder Facets\Source Files">
+      <UniqueIdentifier>{62b60fe9-baf6-4a39-be9c-92ba222e0c12}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\5 Builder Facets\Header Files">
+      <UniqueIdentifier>{31094108-c790-419c-bdcb-bdddbebff4ae}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="SUMMARY.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="stdafx.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="targetver.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Person.h">
+      <Filter>Source Files\5 Builder Facets\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PersonBuilder.h">
+      <Filter>Source Files\5 Builder Facets\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PersonJobBuilder.h">
+      <Filter>Source Files\5 Builder Facets\Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="WithoutBuilder.cpp">
+      <Filter>Source Files\1 Naive</Filter>
+    </ClCompile>
+    <ClCompile Include="Builder.cpp">
+      <Filter>Source Files\2 Builder</Filter>
+    </ClCompile>
+    <ClCompile Include="Fluent_Builder.cpp">
+      <Filter>Source Files\3 Fluent Builder</Filter>
+    </ClCompile>
+    <ClCompile Include="GroovyStyleBuilder.cpp">
+      <Filter>Source Files\4 Groovy Style Builder</Filter>
+    </ClCompile>
+    <ClCompile Include="Facets.cpp">
+      <Filter>Source Files\5 Builder Facets\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Person.cpp">
+      <Filter>Source Files\5 Builder Facets\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PersonAddressBuilder.h">
+      <Filter>Source Files\5 Builder Facets\Header Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PersonBuilder.cpp">
+      <Filter>Source Files\5 Builder Facets\Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

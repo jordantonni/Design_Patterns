@@ -1,0 +1,37 @@
+Def:
+	Chain Of Responsibility: 
+		- A chain of components (classess usually) who all get a chance to look at and process a command or query.
+		Each one can have a default processing implemenetion or none.
+		Each one has the ability to stop the processing chain themselves.
+
+Why?:
+	Click handling, who processes the clicking of a button?
+		- The Button can look at it
+		- The Button group can
+		- The windows can
+	Card Game like Magic?
+		- Creatues have attack and defense values
+		- Can be modified by other cards
+		- Each modifying card needs the opportunity to process creature card
+
+Command Query Seperation:
+	- Command: Ask for an action or change - E.G. Set value to 2;
+	- Query  : Ask for some information    - E.G. What is your attack value?;
+	- QCS    : Have different means to set and get values
+		- Basically; The oppostive to having direct access to fields where we can easily both set and get values.
+
+Pointer Chain: 
+	- Implements the chain by having processing / modifying objects store a pointer to another modifier object
+		- Each object can modify the value, then invoke the pointers modify to continue down the chain.
+	- Bad: 
+		- Each modifier permentantly modifes the object to modifies' attributes.
+		- Why? Because each modifier issues a COMMAND to change the attribute on the underlying object
+		- We instead need to use QCS to intercept and modify the QUERY of what the underlying objects attribute is.
+
+Broker Chain - (Centralised communication construct)
+	- Seperates Command and Query
+	- Communication between an object and something querying it is NOT done by asking the object itself,
+		- It is done though a mediator object (Bus, Broker)
+	- Objects can sign up to the mediator, specifying that whenever a query is asked on the mediator (bus) to look at it also,
+		- Here the modifier can alter the value to return from the mediator query, keeping the actual value in the class the same.
+	

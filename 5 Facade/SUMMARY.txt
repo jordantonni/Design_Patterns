@@ -1,0 +1,25 @@
+Why?:
+	 Facade - Provide a simplier and easy to use interface over a more complex body of code
+			- easier to use a library
+			- reduces the dependencies on the actual code the facade hides
+			- Can replace a poor API with a better API
+
+
+Basically, it's a wrapper class / API that offers a simple API to call.
+It in turn carries out all the complex invocations of the interface you are facading.
+
+i.e. You may have an API that can create windows and sub windows etc.
+Instead of creating a complex window structure by calling all the various methods required.
+
+We create an intermediatry class that is the facade, it would have a method called createLayout()
+inside of which would take care of all the low level details of calling all the required methods of the API and creatings all the windows etc.
+
+
+
+NOTE: No code in this project due to the fact that we would need a complex code base to facade over, no point in creating all that for an example.
+
+TLDR: Wrap a complex API in a simplier one that does many low level invocations to create something easier.
+
+
+NOTE: Can still use the complex lower level API if needed, this just acts as an easier , higher level way, of using it.
+

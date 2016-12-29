@@ -1,0 +1,36 @@
+Def: Visitor Pattern
+	- Add an operation to perform on some class / object structure without changing the classes of the structure themselves
+
+Why?:
+	- Add a new operation / functionality to an entire class hierarchy without having to modify every single class within it
+
+How:
+	- Base class defines a virtual Visit() method
+	- Seperate component, called a Visitor, traverses the class hierarchy using the visit() method.
+
+Dispatch: What function to call?
+	- Static Dispatch: Function called is dependent on the function signiture only. i.e. Static method
+
+	- Dynamic Dispatch:
+		- Single Dispatch: Depends on name of the function and type of the object you are calling it on (implicit this pointer)
+			- i.e. Virtual method call
+		- Multiple Dispatch: Depends on the name of the function, the type of the object you are invoking it on (implicit this pointer)
+							 and the types of the parameters you have passed to it.
+			- i.e. Visitor pattern
+
+Double Dispatch: Visitor
+	- Class hierarchy with objects that can accept a polymorphic visitor object
+		- Invoke a visit method on the visitor, passing a refernce to themselves
+	-Why Double?:
+		-> First, the virtual accept method allows any subclass of hierarchy to be visited
+		-> Secondly, passing a reference of itself to the visitor allows the visitor to select what overloaded visit method to invoke.
+
+Multiple Dispatch:
+	- Instead of the vistor class's visit() method being selected by only 1 paramter, i.e. Paragraph or List etc, it is selected via a combination of them
+
+
+Visitor pattern using double dispatch:
+	Basically:
+		- Class hierarchy has an accept(Visitor&) method
+		- Visitor interface has visit(Foo&), visit(Bar&) methods that are overloaded on the type given to it
+		- Each accept() method just calls the visitor.visit(*this) method of the visitor, passing in the type of itself, allowing that to choose what overload to invoke

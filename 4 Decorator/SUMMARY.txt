@@ -1,0 +1,24 @@
+﻿Decorator Pattern - aka - Wrapper Pattern
+
+Why?:
+	(Def:) - Want to augment some existing functionalty by adding some new behaviour.
+			 Without affecting behavior of other objects of the same class.
+			 Maintain compatability with pre-existing structures.
+			 Without violating Open Closed Principle.
+
+Functional Decorators:
+	- Purpose is to take some pre-existing function and wrap it with more logic. I.e. logging logic around the invocation of the function.
+	- Can create functor objects that do this
+	- Variadic templated functor class takes in any function and wraps it
+
+Aggregrate Decorator / Wrapping Decorator:
+	- Class that stores a reference to the class it wants to decorate / wrap
+	- Doesnt transfer the underlying objects features as you only aggregate the object by containg a reference to it, not inheriating from it.
+	- Can compose at runtime though. In that you can pass the object to decorate in to the wrapping decorators constructor
+
+Mix-in inheritance decorator:
+	- Flexable but static 
+	- Templated class that inheriates from the template type given to it
+		- Therefore it does have access to the underlying objects features as it becomes on of them via inheritance
+	- Only constructable at compile time as it is templates.
+	

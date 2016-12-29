@@ -1,0 +1,25 @@
+Def:
+	Command - Object that represents an instruction to perform some action. It contains all in info required for the action to be taken.
+		- Object represents an operattion such as:
+			- X should change field Y to value Z
+			- X should do action W
+
+Why?:
+	- Allow undor / redo of commands
+		- C++ statements perish after they are executed
+		- Can't directly serialize a sequence of actions to keep a history
+	- Allows recording of macros
+
+
+How?
+	- Create a command class that encapsulates all the details of the operation required (arguments, reference to object etc)
+	- The command class will invoke the operations through itself.
+	- Can also add undo functionality or serialization functionality for the commands by
+		- Calling opposite methods than the orignal once -> Undo
+		- Write commands to file and allow auditing
+
+Composite Command:
+	- Using the composite design pattern 
+	- Store commands as a vector or data structure of commands to process
+	- Can go though each one and call the command itself
+	- Allows for creating macros etc.

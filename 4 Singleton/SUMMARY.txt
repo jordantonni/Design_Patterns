@@ -1,0 +1,49 @@
+WHY?:
+	(Def:) Singleton - A component that is instantiated only once.
+
+	Certain components (classes) make sense to only have one of them; Database Repo, Object factory etc
+	Some constructors are VERY expensive to call -> we would like to only do this once.
+	We don't want copies of the object, for some reason.
+	Multithreading can be easier with only one object.
+
+Ways to do it:
+	Wrong:
+		Global variable - Having a global variable doesnt stop you from creating other objects of that same type anywhere else.
+		Global Static Variable - You can still create more objects of that same type.
+	Works:
+		Static Class - No longer get OOP benefits. But yes you can only get one. Very naive way to do it!
+	Better:
+		Nonstatic Class with static members (AKA Monostate pattern)
+		(Def:) Monostate - Singleton pattern forces only one instance of an object, Monostate forces all instances to have the same state.
+
+Typical C++ Implementation:
+	Private constructor.
+	Delete copy assingment operator.
+	Delete copy constructor.
+	Static method to return a reference to a static function variable of the object. (Get method usually)
+
+Why the Singleton isnt good:
+	Difficult to test due to mocking.
+	Tightly couples the object it is representing to the class itself.
+	i.e. In order to test the object you need to use whatever data it is returning from its own methods
+		 Can't easily use fake or mock data as there can be only 1 singleton and it is set up to use the live data.
+
+	Possible fix to above issue:
+		Use dependency injection and polymorphisim.
+		Have the singleton implement a base interface.
+		Have unit tests invoke the method to test from the polymorphic base abstract class
+		Can swap between the real singleton and the mock data.
+
+		^^Lots of hassle for the Singleton pattern.
+
+Better idea:
+	Use a dependency injection framework that creates the object you need.
+	Specify a singleton policy for it's lifetime (boost di allows you to do this)
+
+		
+
+
+
+
+
+

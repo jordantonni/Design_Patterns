@@ -1,0 +1,23 @@
+Def:
+	- Observer: An object that can be informed by an event occuring in some area of the system.
+				The object / entity generating the event is said to be Observable.
+
+
+Why?:
+	- Want to be informed about some objects property changing, or doing something or some external event happening.
+	- C++ has no built in Event, so we create this functionality using callbacks, function pointers etc
+	- The observer typically provides a callback function that is invoked when the event occurs.
+
+Implementation:
+	- Quite intrusive to implement in classes as we need to define:
+		- Some collection to hold the listeners
+		- A subscribe method to add new listeners to the collection
+		- Unsubscribe 
+		- Notification code that will invoke each of the listners that are currently listening when some event occurs.
+
+Issues:
+	- Race conditions and thread saftey must be thought of for the collection of listeners
+	- Reentrancy conditions can arise and is hard to deal with
+
+Boost::Signals2
+	- Provies an easy to use and include observer pattern that can be added to your classes

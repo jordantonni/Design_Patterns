@@ -1,0 +1,29 @@
+Def: Iterator
+	- Object that facilitates the traversal of a data structure
+
+Iterator types: Forward (list), Bidirectional (doubly linked list), random access (Vector)
+
+
+Why?:
+	- Iternation / Traversal is a key functionality required for Data Structures
+	- Iterator class facilitates this traversal
+		- Keeps a pointer or reference to current element
+		- Knows how to move to the "next" element 
+			-e.g. Next can mean different things depending on pre/post/in-order traversal of a tree for example
+
+
+Operations an Iterator must support:
+	- Comparison !=
+	- Advancing ++
+	- Dereferencing *
+
+Iterators cannot be recursive due to c++ not supporting yeild conntinuation 
+	-(Returning a value and remembering where it last left off)
+
+	- This can mean certain algorithims to get the next element, such as tree traversal can be tricky
+
+Certain data structures may require multiple iterators:
+	- Trees can traverse in:
+		- Inorder (Left, Root, Right)
+		- Preorder (Root, Left, Right)
+		- Postorder (Left, Right, Root)

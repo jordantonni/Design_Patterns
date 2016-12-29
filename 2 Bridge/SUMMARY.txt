@@ -1,0 +1,41 @@
+﻿Why?:
+	(Def:) - Bridge provides a connectory between two objects. Decouples an interface hierarchy from an implmentation hierarchy.
+	Note: Adapter makes things work together after they are build. Bridge designs things to work before they are.
+
+Interface Hierarchies:
+	If you have a big hierarchy of interfaces. Typically you need the same hierarchy of concrete classes.
+	Like below, this results in an exponetial increase in new classes to be made.
+
+UML:
+	Without Bridge:
+
+						  	ThreadScheduler								* In order to support a new operating system that provides both 
+                            /               \
+				  	PreEmpSch 			    CoOpSch 					* Preemptive and Cooperative threads
+					/       \               /      \
+			WindowsPre    UnixPre		UnixCo	 WindowsCo				* We would need to create two new classes that implement the PreEmp and CoOp sch respectively.
+
+
+	With Bridge:
+
+						  	ThreadScheduler	----\					    * Only need to add one class for a new operating system to support the threading.
+						  /       |         (has an instance of)
+				  PreEmpSch		CoOpSch		ThreadSchImplementation		* Thread scheduler has a reference/pointer to a thread implementation
+												/             \
+										 WindowsSchImp	   UnixSchImp	* Can invoke memebers on that thread imp reference, which will either be a windows or uni sch imp.
+
+							
+
+PIMPL:
+	Typically in the pimpl idiom, we have a pointer to an implementation object.
+	Our class provides an API, which in turn invokes the memeber methods of the implementation for that API call.
+	
+	We can also allow this implementation to be polymorphic, so that we can use different objects that invoke different behavior.
+	The impl member then provides a BRIDGE between the API and the behavior.
+
+
+BASICALLY:
+	A class has methods that provide a public API.
+	The class has a pointer or reference to some object that contains methods to realise these API calls.
+
+	Each of the class API methods just invoke the reference->method() to do the API call.

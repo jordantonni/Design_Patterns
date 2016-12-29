@@ -1,0 +1,21 @@
+Def:
+	- Strategy: Allows the behavior of a system to be selected at run-time (Dynamically via pointer or reference changing) or at compile time
+				(Statically using template argument).
+					- The template argument is also known as a Policy. (Boost uses this approach often)
+
+Why?:
+	- Algorithims can be decomposed into high and low level details: (Common parts + Specific Parts)
+	- E.g. Making tea
+		- HIGH LEVEL: Boil hot water, pour into cup, stir
+		- LOW LEVEL: Get teabag, squeeze tea bag
+
+	- Allows us to reuse the higher level parts to make any type of beverage.
+	- Note: The higher level parts are supported by the lower level "strategies"
+
+
+How?
+	- Encapsulate the algorithim by defining it in a high level.
+	- Define an interface / virtual class that the high level algorihim will invoke
+		- Create concrete implementations of the interface for each strategy
+	- Dynamic: Have the algorithim contain a pointer to the interface, pass in whatever strategy you want at that time
+	- Static: Have the algorithim contain a templated instance of the interface, instantiate the algorithim with the strategy you want a compile time
