@@ -81,7 +81,7 @@ private:
 
 void test_prototype_factory_serialization()
 {
-    ContactSer prototype { "Default", Address { "26 Craiganboy Park", "Larne", 999 } };
+    ContactSer prototype { "Default", Address { "31 Privot Drive", "London", 999 } };
 
     string ser_data;
 
