@@ -67,8 +67,8 @@ int User::user_seed = 0;
 
 void test_flyweight()
 {
-    User person1 { "Jordan", "Tonni" };
-    User person2 { "Ryan", "Tonni" };
+    User person1 { "John", "Smith" };
+    User person2 { "Peter", "Jefferson" };
 
     cout << person1 << endl << person2 << endl;
 }
