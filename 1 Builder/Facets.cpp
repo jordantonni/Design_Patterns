@@ -17,7 +17,7 @@ using namespace std;
 void FacetTest()
 {
     Person p = Person::create()
-        .lives().at("26 Craiganboy Park").with_postcode("BT40 3DN").in("Larne")
+        .lives().at("13 Privot Drive").with_postcode("BT56 5KV").in("London")
         .works().at("Google").as_a("Software Developer").earning(128000);
 
     cout << p << endl;
