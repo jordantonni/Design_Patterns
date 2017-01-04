@@ -33,8 +33,8 @@ struct User2
 
 void test_boost_flyweight()
 {
-    User2 Jordan { "Jord", "Tonni" };
-    User2 Ryan { "Ryan", "Tonni" };
+    User2 Jordan { "Jord", "Smith" };
+    User2 Ryan { "Ryan", "Jefferson" };
 
     cout << boolalpha <<
             (&Jordan.last_name.get() == &Ryan.last_name.get()) <<
